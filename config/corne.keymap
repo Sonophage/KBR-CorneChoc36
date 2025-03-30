@@ -221,7 +221,16 @@
 &trans  &kp ESCAPE      &kp Q  &kp W         &kp E  &kp R        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp TAB         &kp A  &kp S         &kp D  &kp F        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_SHIFT  &kp Z  &kp X         &kp C  &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                               &kp LEFT_ALT  &mo 1  &kp SPACE    &trans  &mo 2   &trans
+                               &kp LEFT_ALT  &mo 5  &kp SPACE    &trans  &tog 0  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &kp G     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &kp B     &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans        &trans        &trans    &trans  &trans  &trans
             >;
         };
     };

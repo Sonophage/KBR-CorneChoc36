@@ -96,10 +96,10 @@
 
         Mouse {
             bindings = <
-&trans  &kp F5     &msc SCRL_UP        &mmv MOVE_Y(-2000)  &msc SCRL_RIGHT    &none     &none           &none     &none     &none         &none      &trans
-&trans  &mkp RCLK  &mmv MOVE_X(-2000)  &mkp LCLK           &mmv MOVE_X(2000)  &none     &none           &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &none      &msc SCRL_DOWN      &mmv MOVE_Y(2000)   &msc SCRL_LEFT     &none     &none           &none     &none     &none         &none      &trans
-                                       &trans              &to 0              &trans    &kp LEFT_SHIFT  &to 3     &trans
+&trans  &kp F5     &msc SCRL_DOWN      &mmv MOVE_Y(-2000)  &msc SCRL_UP       &kp K_BACK       &none             &none         &none     &none         &none      &trans
+&trans  &mkp RCLK  &mmv MOVE_X(-2000)  &mkp LCLK           &mmv MOVE_X(2000)  &kp K_FORWARD    &none             &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &none      &msc SCRL_LEFT      &mmv MOVE_Y(2000)   &msc SCRL_RIGHT    &none            &none             &none         &none     &none         &none      &trans
+                                       &trans              &trans             &trans           &kp LS(LEFT_GUI)  &kp LEFT_GUI  &trans
             >;
 
             label = "MSE";

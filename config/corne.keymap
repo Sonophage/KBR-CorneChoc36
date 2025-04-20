@@ -24,13 +24,6 @@
             quick-tap-ms = <180>;
             global-quick-tap;
         };
-
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
-            #binding-cells = <0>;
-            continue-list = <MINUS BACKSPACE>;
-        };
     };
 
     combos {
@@ -85,7 +78,7 @@
 &none  &kp Q        &kp D           &kp R             &kp W           &kp B             &kp J      &kp F            &kp U        &kp P            &kp BACKSPACE        &none
 &none  &hm COLON A  &hm LEFT_ALT S  &hm LCTRL H       &hm LEFT_GUI T  &kp G             &kp Y      &hm RIGHT_GUI N  &hm RCTRL E  &hm RIGHT_ALT O  &hm SEMI I           &none
 &none  &kp Z        &kp X           &kp M             &kp C           &kp V             &kp K      &kp L            &kp COMMA    &kp DOT          &mt BACKSLASH SLASH  &none
-                                    &kp LS(LEFT_GUI)  &mo 4           &kp LEFT_SHIFT    &kp SPACE  &mo 1            &mo 2
+                                    &kp LS(LEFT_GUI)  &mo 3           &kp LEFT_SHIFT    &kp SPACE  &mo 1            &mo 2
             >;
 
             label = "KeyPress";

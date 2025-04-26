@@ -86,10 +86,10 @@
 
         NumPad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMLOCK                       &mt LS(LG(KP_NUMBER_7)) KP_NUMBER_7  &mt LS(LG(KP_NUMBER_8)) KP_NUMBER_8  &mt LS(LG(KP_NUMBER_9)) NUMBER_9     &none         &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &none                                &mt LS(LG(KP_NUMBER_4)) KP_NUMBER_4  &mt LS(LG(KP_NUMBER_5)) KP_NUMBER_5  &mt LS(LG(KP_NUMBER_6)) KP_NUMBER_6  &kp LEFT_GUI  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mt LS(LG(KP_NUMBER_0)) KP_NUMBER_0  &mt LG(LS(KP_NUMBER_1)) KP_NUMBER_1  &mt LS(LG(KP_NUMBER_1)) KP_NUMBER_1  &mt LS(LG(KP_NUMBER_3)) KP_NUMBER_3  &none         &trans
-                        &trans  &trans  &trans    &trans                               &trans                               &trans
+&trans  &kp C_MUTE  &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &kp KP_NUMLOCK                       &mt LS(LG(KP_NUMBER_7)) KP_NUMBER_7  &mt LS(LG(KP_NUMBER_8)) KP_NUMBER_8  &mt LS(LG(KP_NUMBER_9)) NUMBER_9     &none         &trans
+&trans  &trans      &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none                                &mt LS(LG(KP_NUMBER_4)) KP_NUMBER_4  &mt LS(LG(KP_NUMBER_5)) KP_NUMBER_5  &mt LS(LG(KP_NUMBER_6)) KP_NUMBER_6  &kp LEFT_GUI  &trans
+&trans  &trans      &trans            &trans                &trans                &trans    &mt LS(LG(KP_NUMBER_0)) KP_NUMBER_0  &mt LG(LS(KP_NUMBER_1)) KP_NUMBER_1  &mt LS(LG(KP_NUMBER_1)) KP_NUMBER_1  &mt LS(LG(KP_NUMBER_3)) KP_NUMBER_3  &none         &trans
+                                      &trans                &trans                &trans    &trans                               &trans                               &trans
             >;
 
             label = "NUM";
@@ -108,10 +108,10 @@
 
         Mouse {
             bindings = <
-&trans  &kp F5     &msc SCRL_DOWN      &mmv MOVE_Y(-2000)  &msc SCRL_UP       &kp K_BACK       &none             &none         &none     &none         &none      &trans
-&trans  &mkp RCLK  &mmv MOVE_X(-2000)  &mkp LCLK           &mmv MOVE_X(2000)  &kp K_FORWARD    &none             &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &none      &msc SCRL_LEFT      &mmv MOVE_Y(2000)   &msc SCRL_RIGHT    &none            &none             &none         &none     &none         &none      &trans
-                                       &trans              &trans             &trans           &kp LS(LEFT_GUI)  &kp LEFT_GUI  &trans
+&trans  &none      &msc SCRL_DOWN      &mmv MOVE_Y(-2000)  &msc SCRL_UP       &kp K_BACK       &kp F1            &kp F2        &kp UP    &kp F3        &kp F4   &trans
+&trans  &mkp RCLK  &mmv MOVE_X(-2000)  &mkp LCLK           &mmv MOVE_X(2000)  &kp K_FORWARD    &kp F11           &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp F5   &trans
+&trans  &none      &msc SCRL_LEFT      &mmv MOVE_Y(2000)   &msc SCRL_RIGHT    &none            &kp F6            &kp F7        &kp F8    &kp F9        &kp F10  &trans
+                                       &trans              &trans             &kp F12          &kp LS(LEFT_GUI)  &kp LEFT_GUI  &trans
             >;
 
             label = "MSE";

@@ -86,10 +86,10 @@
 
         NumPad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &trans            &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &kp LEFT_GUI      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &kp LS(LEFT_GUI)  &trans
-                        &trans  &trans  &trans    &kp N0  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMLOCK                       &mt LS(LG(KP_NUMBER_7)) KP_NUMBER_7  &mt LS(LG(KP_NUMBER_8)) KP_NUMBER_8  &mt LS(LG(KP_NUMBER_9)) NUMBER_9     &none         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &none                                &mt LS(LG(KP_NUMBER_4)) KP_NUMBER_4  &mt LS(LG(KP_NUMBER_5)) KP_NUMBER_5  &mt LS(LG(KP_NUMBER_6)) KP_NUMBER_6  &kp LEFT_GUI  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mt LS(LG(KP_NUMBER_0)) KP_NUMBER_0  &mt LG(LS(KP_NUMBER_1)) KP_NUMBER_1  &mt LS(LG(KP_NUMBER_1)) KP_NUMBER_1  &mt LS(LG(KP_NUMBER_3)) KP_NUMBER_3  &none         &trans
+                        &trans  &trans  &trans    &trans                               &trans                               &trans
             >;
 
             label = "NUM";

@@ -16,13 +16,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <180>;
-            global-quick-tap;
+            quick-tap-ms = <200>;
         };
     };
 
@@ -77,7 +75,7 @@
             bindings = <
 &none  &kp Q        &kp D           &kp R             &kp W           &kp B             &kp J      &kp F            &kp U        &kp P            &kp BACKSPACE        &none
 &none  &hm COLON A  &hm LEFT_ALT S  &hm LCTRL H       &hm LEFT_GUI T  &kp G             &kp Y      &hm RIGHT_GUI N  &hm RCTRL E  &hm RIGHT_ALT O  &hm SEMI I           &none
-&none  &mt LC(Z) Z  &mt LC(X) X     &kp M             &mt LC(C) C     &mt LC(V) V       &kp K      &kp L            &kp COMMA    &kp DOT          &mt BACKSLASH SLASH  &none
+&none  &hm LC(Z) Z  &hm LC(X) X     &kp M             &hm LC(C) C     &hm LC(V) V       &kp K      &kp L            &kp COMMA    &kp DOT          &mt BACKSLASH SLASH  &none
                                     &kp LS(LEFT_GUI)  &mo 3           &kp LEFT_SHIFT    &kp SPACE  &mo 1            &mo 2
             >;
 
@@ -86,9 +84,9 @@
 
         NumPad {
             bindings = <
-&trans  &kp C_MUTE  &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none              &mt LS(LG(N7)) N7              &mt LS(LG(N8)) N8              &mt LS(LG(N9)) NUMBER_9        &kp COMMA     &trans
-&trans  &trans      &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none              &mt LS(LG(NUMBER_4)) NUMBER_4  &mt LS(LG(N5)) N5              &mt LS(LG(NUMBER_6)) NUMBER_6  &kp LEFT_GUI  &trans
-&trans  &trans      &trans            &trans                &trans                &trans    &mt LS(LG(N0)) N0  &mt LG(LS(NUMBER_1)) NUMBER_1  &mt LS(LG(NUMBER_2)) NUMBER_2  &mt LS(LG(NUMBER_3)) NUMBER_3  &kp DOT       &trans
+&trans  &kp C_MUTE  &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none              &hm LS(LG(N7)) N7              &hm LS(LG(N8)) N8              &hm LS(LG(N9)) NUMBER_9        &kp COMMA     &trans
+&trans  &trans      &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none              &hm LS(LG(NUMBER_4)) NUMBER_4  &hm LS(LG(N5)) N5              &hm LS(LG(NUMBER_6)) NUMBER_6  &kp LEFT_GUI  &trans
+&trans  &trans      &trans            &trans                &trans                &trans    &hm LS(LG(N0)) N0  &hm LG(LS(NUMBER_1)) NUMBER_1  &hm LS(LG(NUMBER_2)) NUMBER_2  &hm LS(LG(NUMBER_3)) NUMBER_3  &kp DOT       &trans
                                       &trans                &trans                &trans    &trans             &trans                         &trans
             >;
 
@@ -109,8 +107,8 @@
         Mouse {
             bindings = <
 &trans  &msc SCRL_UP    &mkp RCLK           &mmv MOVE_Y(-1900)  &mkp LCLK          &kp K_BACK       &kp F1            &kp F2        &kp UP    &kp F3     &kp F4   &trans
-&trans  &msc SCRL_DOWN  &mmv MOVE_X(-1900)  &mmv MOVE_Y(1900)      &mmv MOVE_X(1900)  &kp K_FORWARD    &kp F11           &kp LEFT      &kp DOWN  &kp RIGHT  &kp F5   &trans
-&trans  &none           &msc SCRL_LEFT      &none               &msc SCRL_RIGHT    &none            &kp F6            &kp F7        &kp F8    &kp F9     &kp F10  &trans
+&trans  &msc SCRL_DOWN  &mmv MOVE_X(-1900)  &mmv MOVE_Y(1900)   &mmv MOVE_X(1900)  &kp K_FORWARD    &kp F11           &kp LEFT      &kp DOWN  &kp RIGHT  &kp F5   &trans
+&trans  &kp LC(MINUS)   &msc SCRL_LEFT      &none               &msc SCRL_RIGHT    &kp LC(PLUS)     &kp F6            &kp F7        &kp F8    &kp F9     &kp F10  &trans
                                             &trans              &trans             &kp F12          &kp LS(LEFT_GUI)  &kp LEFT_GUI  &trans
             >;
 

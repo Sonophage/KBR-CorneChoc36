@@ -86,10 +86,10 @@
 
         NumPad {
             bindings = <
-&trans  &kp C_MUTE  &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none                                &mt LS(LG(N7)) N7              &mt LS(LG(N8)) N8              &mt LS(LG(N9)) NUMBER_9        &none         &trans
-&trans  &trans      &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none                                &mt LS(LG(NUMBER_4)) NUMBER_4  &mt LS(LG(N5)) N5              &mt LS(LG(NUMBER_6)) NUMBER_6  &kp LEFT_GUI  &trans
-&trans  &trans      &trans            &trans                &trans                &trans    &mt LS(LG(KP_NUMBER_0)) KP_NUMBER_0  &mt LG(LS(NUMBER_1)) NUMBER_1  &mt LS(LG(NUMBER_2)) NUMBER_2  &mt LS(LG(NUMBER_3)) NUMBER_3  &none         &trans
-                                      &trans                &trans                &trans    &trans                               &trans                         &trans
+&trans  &kp C_MUTE  &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none              &mt LS(LG(N7)) N7              &mt LS(LG(N8)) N8              &mt LS(LG(N9)) NUMBER_9        &kp COMMA     &trans
+&trans  &trans      &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none              &mt LS(LG(NUMBER_4)) NUMBER_4  &mt LS(LG(N5)) N5              &mt LS(LG(NUMBER_6)) NUMBER_6  &kp LEFT_GUI  &trans
+&trans  &trans      &trans            &trans                &trans                &trans    &mt LS(LG(N0)) N0  &mt LG(LS(NUMBER_1)) NUMBER_1  &mt LS(LG(NUMBER_2)) NUMBER_2  &mt LS(LG(NUMBER_3)) NUMBER_3  &kp DOT       &trans
+                                      &trans                &trans                &trans    &trans             &trans                         &trans
             >;
 
             label = "NUM";

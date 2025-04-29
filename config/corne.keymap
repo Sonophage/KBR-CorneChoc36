@@ -105,7 +105,7 @@
 &trans  &kp C_MUTE    &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none   &hm LS(LG(N7)) N7              &hm LS(LG(N8)) N8              &hm LS(LG(N9)) NUMBER_9        &kp COMMA  &trans
 &trans  &trans        &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none   &hm LS(LG(NUMBER_4)) NUMBER_4  &hm LS(LG(N5)) N5              &hm LS(LG(NUMBER_6)) NUMBER_6  &none      &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2          &bt BT_SEL 3          &trans    &none   &hm LG(LS(NUMBER_1)) NUMBER_1  &hm LS(LG(NUMBER_2)) NUMBER_2  &hm LS(LG(NUMBER_3)) NUMBER_3  &kp DOT    &trans
-                                        &trans                &trans                &trans    &kp N0  &kp LS(LEFT_GUI)               &kp LEFT_GUI
+                                        &trans                &trans                &trans    &kp N0  &kp LEFT_GUI                   &none
             >;
 
             label = "NUM";

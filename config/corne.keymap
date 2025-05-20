@@ -102,9 +102,9 @@
 
         NumPad {
             bindings = <
-&trans  &kp C_MUTE    &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none   &hm LS(LG(N7)) N7              &hm LS(LG(N8)) N8              &hm LS(LG(N9)) NUMBER_9        &kp COMMA  &trans
-&trans  &trans        &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none   &hm LS(LG(NUMBER_4)) NUMBER_4  &hm LS(LG(N5)) N5              &hm LS(LG(NUMBER_6)) NUMBER_6  &none      &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2          &bt BT_SEL 3          &trans    &none   &hm LG(LS(NUMBER_1)) NUMBER_1  &hm LS(LG(NUMBER_2)) NUMBER_2  &hm LS(LG(NUMBER_3)) NUMBER_3  &kp DOT    &trans
+&trans  &kp C_MUTE    &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none   &hm LS(LG(N7)) N7              &hm LS(LG(N8)) N8              &hm LS(LG(N9)) NUMBER_9        &kp COMMA       &trans
+&trans  &trans        &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none   &hm LS(LG(NUMBER_4)) NUMBER_4  &hm LS(LG(N5)) N5              &hm LS(LG(NUMBER_6)) NUMBER_6  &kp LEFT_SHIFT  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2          &bt BT_SEL 3          &trans    &none   &hm LG(LS(NUMBER_1)) NUMBER_1  &hm LS(LG(NUMBER_2)) NUMBER_2  &hm LS(LG(NUMBER_3)) NUMBER_3  &kp DOT         &trans
                                         &trans                &trans                &trans    &kp N0  &kp LEFT_GUI                   &none
             >;
 
@@ -113,10 +113,10 @@
 
         Mouse {
             bindings = <
-&trans  &msc SCRL_UP    &mkp RCLK           &mmv MOVE_Y(-1900)  &mkp LCLK          &kp K_BACK       &kp F1            &kp F2    &kp UP    &kp F3     &kp F4   &trans
-&trans  &msc SCRL_DOWN  &mmv MOVE_X(-1900)  &mmv MOVE_Y(1900)   &mmv MOVE_X(1900)  &kp K_FORWARD    &kp F11           &kp LEFT  &kp DOWN  &kp RIGHT  &kp F5   &trans
-&trans  &kp LC(MINUS)   &msc SCRL_LEFT      &none               &msc SCRL_RIGHT    &kp LC(PLUS)     &kp F6            &kp F7    &kp F8    &kp F9     &kp F10  &trans
-                                            &trans              &trans             &kp F12          &kp LS(LEFT_GUI)  &trans    &trans
+&trans  &kp RCTRL      &msc SCRL_DOWN      &mmv MOVE_Y(-1900)  &msc SCRL_UP       &kp K_BACK       &kp F1   &kp F2    &kp UP    &kp F3     &kp F4        &trans
+&trans  &mkp RCLK      &mmv MOVE_X(-1900)  &mmv MOVE_Y(1900)   &mmv MOVE_X(1900)  &kp K_FORWARD    &kp F11  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_GUI  &trans
+&trans  &kp LC(MINUS)  &msc SCRL_LEFT      &none               &msc SCRL_RIGHT    &kp LC(PLUS)     &kp F6   &kp F7    &kp F8    &kp F9     &kp F10       &trans
+                                           &kp LEFT_SHIFT      &kp F12            &mkp LCLK        &kp F5   &trans    &trans
             >;
 
             label = "MSE";

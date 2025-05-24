@@ -113,8 +113,8 @@
 
         Mouse {
             bindings = <
-&trans  &kp RCTRL      &msc SCRL_DOWN      &mmv MOVE_Y(-1900)  &msc SCRL_UP       &kp K_BACK       &kp F1   &kp F2    &kp UP    &kp F3     &kp F4        &trans
-&trans  &mkp RCLK      &mmv MOVE_X(-1900)  &mmv MOVE_Y(1900)   &mmv MOVE_X(1900)  &kp K_FORWARD    &kp F11  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_GUI  &trans
+&trans  &kp RCTRL      &msc SCRL_DOWN      &mmv MOVE_Y(-400)  &msc SCRL_UP       &kp K_BACK       &kp F1   &kp F2    &kp UP    &kp F3     &kp F4        &trans
+&trans  &mkp RCLK      &mmv MOVE_X(-400)  &mmv MOVE_Y(400)   &mmv MOVE_X(400)  &kp K_FORWARD    &kp F11  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_GUI  &trans
 &trans  &kp LC(MINUS)  &msc SCRL_LEFT      &none               &msc SCRL_RIGHT    &kp LC(PLUS)     &kp F6   &kp F7    &kp F8    &kp F9     &kp F10       &trans
                                            &kp LEFT_SHIFT      &kp F12            &mkp LCLK        &kp F5   &trans    &trans
             >;

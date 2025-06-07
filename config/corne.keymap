@@ -120,16 +120,17 @@
         };
 
         Navigation {
-            label = "Navigation";
-            display-name = "NAV";
+    label = "Navigation";
+    display-name = "NAV";
 
-            bindings = <
-&none  &kp C_BRI_UP   &kp HOME        &mkp MCLK       &kp END          &kp LEFT_ALT      &kp PRINTSCREEN  &kp K_BACK      &mkp MCLK       &kp K_FORWARD    &kp C_VOLUME_UP    &none
-&none  &kp C_BRI_DEC  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &kp C_VOLUME_DOWN  &none
-&none  &kp LCTRL      &mkp LCLK       &msc SCRL_DOWN  &mkp RCLK        &kp LEFT_ARROW    &kp RIGHT_ARROW  &mkp LCLK       &mmv MOVE_DOWN  &mkp RCLK        &kp K_MUTE         &none
-                                      &trans          &trans           &trans            &trans           &trans          &trans
-            >;
-        };
+    bindings = <
+&none  &kp C_BRI_UP    &kp HOME         &mkp MCLK         &kp END            &kp LEFT_ALT      &kp PRINTSCREEN  &kp K_BACK      &mkp MCLK           &kp K_FORWARD      &kp C_VOLUME_UP    &none
+&none  &kp C_BRI_DEC   &msc SCRL_LEFT 1 &msc SCRL_UP 1    &msc SCRL_RIGHT 1  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT 6 &mmv MOVE_UP 6      &mmv MOVE_RIGHT 6  &kp C_VOLUME_DOWN  &none
+&none  &kp LCTRL       &mkp LCLK        &msc SCRL_DOWN 1  &mkp RCLK          &kp LEFT_ARROW    &kp RIGHT_ARROW  &mkp LCLK         &mmv MOVE_DOWN 6     &mkp RCLK           &kp K_MUTE         &none
+                                         &trans           &trans             &trans            &trans           &trans            &trans
+    >;
+};
+
     };
 
     conditional_layers {

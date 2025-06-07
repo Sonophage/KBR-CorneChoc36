@@ -32,6 +32,13 @@
 
             quick-tap-ms = <200>;
         };
+
+        toggle: toggle {
+            compatible = "zmk,behavior-key-toggle";
+            label = "TOGGLE";
+            #binding-cells = <1>;
+            toggle-mode = "flip";
+        };
     };
 
     combos {
@@ -70,10 +77,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp Q            &kp D            &kp R         &kp W                      &kp B                       &kp J                         &kp F                     &kp U         &kp P             &kp BACKSPACE        &none
-&none  &mt A COLON      &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T          &kp G                       &kp Y                         &hml RIGHT_SHIFT N        &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
-&none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M         &hml LC(C) C               &hml LC(V) V                &kp K                         &kp L                     &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
-                                         &none         &mo_new_behavior 1 ESCAPE  &mo_new_behavior 2 SPACE    &mo_new_behavior 3 BACKSPACE  &mo_new_behavior 4 ENTER  &none
+&none  &kp Q            &kp D            &kp R              &kp W                      &kp B                       &kp J                         &kp F                     &kp U         &kp P             &kp BACKSPACE        &none
+&none  &mt A COLON      &hml LEFT_ALT S  &hml LCTRL H       &hml LEFT_SHIFT T          &kp G                       &kp Y                         &hml RIGHT_SHIFT N        &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
+&none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M              &hml LC(C) C               &hml LC(V) V                &kp K                         &kp L                     &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
+                                         &toggle AMPERSAND  &mo_new_behavior 1 ESCAPE  &mo_new_behavior 2 SPACE    &mo_new_behavior 3 BACKSPACE  &mo_new_behavior 4 ENTER  &toggle AMPS
             >;
 
             label = "KeyPress";
@@ -86,7 +93,7 @@
 &none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
 &none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
 &none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS              &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp BACKSLASH          &kp SLASH          &kp GRAVE        &kp ASTRK          &none
-                                         &none             &trans                &trans            &trans           &trans                 &none
+                                         &trans            &trans                &trans            &trans           &trans                 &trans
             >;
         };
 
@@ -97,7 +104,7 @@
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &none     &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
 &none  &kp F9  &kp F10  &kp F11  &kp F12  &none     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &none
-                        &none    &trans   &trans    &trans        &trans        &none
+                        &trans   &trans   &trans    &trans        &trans        &trans
             >;
         };
 
@@ -108,7 +115,7 @@
 &none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
 &none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
 &none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS              &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp BACKSLASH          &kp SLASH          &kp GRAVE        &kp ASTRK          &none
-                                         &none             &trans                &trans            &trans           &trans                 &none
+                                         &trans            &trans                &trans            &trans           &trans                 &trans
             >;
         };
 
@@ -119,7 +126,7 @@
 &none  &kp C_BRI_UP   &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp LEFT_ALT      &kp PRINTSCREEN  &mkp LCLK       &mkp MCLK       &mkp RCLK        &kp C_VOLUME_UP    &none
 &none  &kp C_BRI_DEC  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &kp C_VOLUME_DOWN  &none
 &none  &kp LCTRL      &kp HOME        &msc SCRL_DOWN  &kp END          &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp K_BACK      &mmv MOVE_DOWN  &kp K_FORWARD    &kp K_MUTE         &none
-                                      &none           &trans           &trans            &trans           &trans          &none
+                                      &trans          &trans           &trans            &trans           &trans          &trans
             >;
         };
     };

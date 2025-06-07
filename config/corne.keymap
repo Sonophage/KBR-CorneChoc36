@@ -7,6 +7,15 @@
 #define SYM 2
 #define ADJ 3
 
+&mmv { time-to-max-speed-ms = <150>; };
+
+&msc {
+    time-to-max-speed-ms = <150>;
+    acceleration-exponent = <1>;
+};
+
+&tog { toggle-mode = "flip"; };
+
 / {
     behaviors {
         hml: homerow_layer {
@@ -16,6 +25,7 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
             quick-tap-ms = <200>;
         };
 
@@ -26,6 +36,7 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
+
             quick-tap-ms = <200>;
         };
     };
@@ -74,7 +85,6 @@
         KeyPress {
             label = "KeyPress";
             display-name = "DEF";
-
             bindings = <
 &none  &kp Q            &kp D            &kp R         &kp W                      &kp B                       &kp J                         &kp F                     &kp U         &kp P             &kp BACKSPACE        &none
 &none  &mt A COLON      &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T          &kp G                       &kp Y                         &hml RIGHT_SHIFT N        &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
@@ -86,7 +96,6 @@
         Symbol {
             label = "Symbol";
             display-name = "SYM";
-
             bindings = <
 &none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
 &none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
@@ -98,7 +107,6 @@
         Numpad {
             label = "Numpad";
             display-name = "NUM";
-
             bindings = <
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &none     &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
@@ -110,7 +118,6 @@
         Macro {
             label = "Macro";
             display-name = "MAC";
-
             bindings = <
 &none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
 &none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
@@ -122,17 +129,14 @@
         Navigation {
             label = "Navigation";
             display-name = "NAV";
-
             bindings = <
-&none  &kp C_BRI_UP   &kp HOME        &mkp MCLK       &kp END          &kp LEFT_ALT      &kp PRINTSCREEN  &kp K_BACK      &mkp MCLK       &kp K_FORWARD    &kp C_VOLUME_UP    &none
-&none  &kp C_BRI_DEC  &msc SCRL_LEFT 2 &msc SCRL_UP 2   &msc SCRL_RIGHT 2 &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT 10 &mmv MOVE_UP 10    &mmv MOVE_RIGHT 10 &kp C_VOLUME_DOWN  &none
-&none  &kp LCTRL      &mkp LCLK       &msc SCRL_DOWN 2 &mkp RCLK        &kp LEFT_ARROW    &kp RIGHT_ARROW  &mkp LCLK       &mmv MOVE_DOWN 10 &mkp RCLK        &kp K_MUTE         &none
-                                      &trans          &trans           &trans            &trans           &trans          &trans
+&none  &kp C_BRI_UP   &kp HOME          &mkp MCLK         &kp END            &kp LEFT_ALT      &kp PRINTSCREEN  &kp K_BACK         &mkp MCLK          &kp K_FORWARD       &kp C_VOLUME_UP    &none
+&none  &kp C_BRI_DEC  &msc SCRL_LEFT 2  &msc SCRL_UP 2    &msc SCRL_RIGHT 2  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT 10  &mmv MOVE_UP 10    &mmv MOVE_RIGHT 10  &kp C_VOLUME_DOWN  &none
+&none  &kp LCTRL      &mkp LCLK         &msc SCRL_DOWN 2  &mkp RCLK          &kp LEFT_ARROW    &kp RIGHT_ARROW  &mkp LCLK          &mmv MOVE_DOWN 10  &mkp RCLK           &kp K_MUTE         &none
+                                        &trans            &trans             &trans            &trans           &trans             &trans
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };

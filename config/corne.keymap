@@ -12,13 +12,24 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        hml: homerow_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HOMEROW_LAYER";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <200>;
+        };
+
+        mo_new_behavior: mo_new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_NEW_BEHAVIOR";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
 
             quick-tap-ms = <200>;
         };
@@ -27,20 +38,10 @@
     combos {
         compatible = "zmk,combos";
 
-        Esc {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>;
-        };
-
         Tab {
             bindings = <&kp TAB>;
             key-positions = <13 14>;
             timeout-ms = <100>;
-        };
-
-        Return {
-            bindings = <&kp RETURN>;
-            key-positions = <22 21>;
         };
 
         Delete {
@@ -51,17 +52,7 @@
 
         Caps {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <38 39>;
-        };
-
-        ShiftReturn {
-            bindings = <&kp LS(RETURN)>;
-            key-positions = <37 40>;
-        };
-
-        Application {
-            bindings = <&kp LG(A)>;
-            key-positions = <36 41>;
+            key-positions = <16 19>;
         };
     };
 
@@ -80,10 +71,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp Q        &kp D           &kp R        &kp W           &kp B                    &kp J                 &kp F            &kp U         &kp P            &kp BACKSPACE        &none
-&none  &hm COLON A  &hm LEFT_ALT S  &hm LCTRL H  &hm LEFT_GUI T  &kp G                    &kp Y                 &hm RIGHT_GUI N  &hm RCTRL E   &hm RIGHT_ALT O  &hm SEMI I           &none
-&none  &hm LC(Z) Z  &hm LC(X) X     &kp M        &hm LC(C) C     &hm LC(V) V              &kp K                 &kp L            &kp COMMA     &kp DOT          &mt BACKSLASH SLASH  &none
-                                    &mo 1        &mo 2           &mt LG(RETURN) RETURN    &mt LEFT_SHIFT SPACE  &mo 3            &kp LEFT_GUI
+&none  &kp Q            &kp D            &kp R         &kp W                      &kp B                       &kp J                         &kp F                     &kp U         &kp P             &kp BACKSPACE        &none
+&none  &mt A COLON      &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T          &kp G                       &kp Y                         &hml RIGHT_SHIFT N        &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
+&none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M         &hml LC(C) C               &hml LC(V) V                &kp K                         &kp L                     &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
+                                         &none         &mo_new_behavior 1 ESCAPE  &mo_new_behavior 2 SPACE    &mo_new_behavior 3 BACKSPACE  &mo_new_behavior 1 ENTER  &none
             >;
 
             label = "KeyPress";
@@ -102,10 +93,10 @@
 
         NumPad {
             bindings = <
-&trans  &kp C_MUTE    &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none   &hm LS(LG(N7)) N7              &hm LS(LG(N8)) N8              &hm LS(LG(N9)) NUMBER_9        &kp COMMA       &trans
-&trans  &trans        &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none   &hm LS(LG(NUMBER_4)) NUMBER_4  &hm LS(LG(N5)) N5              &hm LS(LG(NUMBER_6)) NUMBER_6  &kp LEFT_SHIFT  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2          &bt BT_SEL 3          &trans    &none   &hm LG(LS(NUMBER_1)) NUMBER_1  &hm LS(LG(NUMBER_2)) NUMBER_2  &hm LS(LG(NUMBER_3)) NUMBER_3  &kp DOT         &trans
-                                        &trans                &trans                &trans    &kp N0  &kp LEFT_GUI                   &none
+&trans  &kp C_MUTE    &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none   &hml LS(LG(N7)) N7              &hml LS(LG(N8)) N8              &hml LS(LG(N9)) NUMBER_9        &kp COMMA       &trans
+&trans  &trans        &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none   &hml LS(LG(NUMBER_4)) NUMBER_4  &hml LS(LG(N5)) N5              &hml LS(LG(NUMBER_6)) NUMBER_6  &kp LEFT_SHIFT  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2          &bt BT_SEL 3          &trans    &none   &hml LG(LS(NUMBER_1)) NUMBER_1  &hml LS(LG(NUMBER_2)) NUMBER_2  &hml LS(LG(NUMBER_3)) NUMBER_3  &kp DOT         &trans
+                                        &trans                &trans                &trans    &kp N0  &kp LEFT_GUI                    &none
             >;
 
             label = "NUM";
@@ -120,6 +111,17 @@
             >;
 
             label = "MSE";
+        };
+
+        layer_4 {
+            label = "KeyPress";
+            display-name = "KYB";
+            bindings = <
+&none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                     &kp POUND                   &kp DOLLAR                    &kp PERCENT               &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
+&none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS       &kp UP_ARROW                &kp DOWN                      &kp RIGHT_PARENTHESIS     &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
+&none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS                   &kp LEFT_ARROW              &kp RIGHT_ARROW               &kp BACKSLASH             &kp SLASH          &kp GRAVE        &kp ASTRK          &none
+                                         &none             &mo_new_behavior 1 ESCAPE  &mo_new_behavior 2 SPACE    &mo_new_behavior 3 BACKSPACE  &mo_new_behavior 1 ENTER  &none
+            >;
         };
     };
 

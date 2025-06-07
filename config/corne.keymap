@@ -7,14 +7,7 @@
 #define SYM 2
 #define ADJ 3
 
-&mmv { time-to-max-speed-ms = <150>; };
-
-&msc {
-    time-to-max-speed-ms = <150>;
-    acceleration-exponent = <1>;
-};
-
-&tog { toggle-mode = "flip"; };
+//testing mouse movement and scroll binds...
 
 / {
     behaviors {
@@ -79,23 +72,33 @@
         };
     };
 
+    //
+
     keymap {
         compatible = "zmk,keymap";
 
         KeyPress {
-            label = "KeyPress";
-            display-name = "DEF";
+            display-name = "KYB";
+
+            // -----------------------------------------------------------------------------------------
+            // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
+            // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
+            // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
+            // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
+
             bindings = <
 &none  &kp Q            &kp D            &kp R         &kp W                      &kp B                       &kp J                         &kp F                     &kp U         &kp P             &kp BACKSPACE        &none
 &none  &mt A COLON      &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T          &kp G                       &kp Y                         &hml RIGHT_SHIFT N        &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
 &none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M         &hml LC(C) C               &hml LC(V) V                &kp K                         &kp L                     &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
                                          &none         &mo_new_behavior 1 ESCAPE  &mo_new_behavior 2 SPACE    &mo_new_behavior 3 BACKSPACE  &mo_new_behavior 4 ENTER  &none
             >;
+
+            label = "KeyPress";
         };
 
         Symbol {
             label = "Symbol";
-            display-name = "SYM";
+            display-name = "KYB";
             bindings = <
 &none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
 &none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
@@ -106,7 +109,7 @@
 
         Numpad {
             label = "Numpad";
-            display-name = "NUM";
+            display-name = "KYB";
             bindings = <
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &none     &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
@@ -117,7 +120,7 @@
 
         Macro {
             label = "Macro";
-            display-name = "MAC";
+            display-name = "KYB";
             bindings = <
 &none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
 &none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
@@ -128,12 +131,12 @@
 
         Navigation {
             label = "Navigation";
-            display-name = "NAV";
+            display-name = "KYB";
             bindings = <
-&none  &kp C_BRI_UP   &kp HOME          &mkp MCLK         &kp END            &kp LEFT_ALT      &kp PRINTSCREEN  &kp K_BACK         &mkp MCLK          &kp K_FORWARD       &kp C_VOLUME_UP    &none
-&none  &kp C_BRI_DEC  &msc SCRL_LEFT 2  &msc SCRL_UP 2    &msc SCRL_RIGHT 2  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT 10  &mmv MOVE_UP 10    &mmv MOVE_RIGHT 10  &kp C_VOLUME_DOWN  &none
-&none  &kp LCTRL      &mkp LCLK         &msc SCRL_DOWN 2  &mkp RCLK          &kp LEFT_ARROW    &kp RIGHT_ARROW  &mkp LCLK          &mmv MOVE_DOWN 10  &mkp RCLK           &kp K_MUTE         &none
-                                        &trans            &trans             &trans            &trans           &trans             &trans
+&none  &kp C_BRI_UP   &kp HOME        &mkp MCLK       &kp END          &kp LEFT_ALT      &kp PRINTSCREEN  &kp K_BACK      &mkp MCLK       &kp K_FORWARD    &kp C_VOLUME_UP    &none
+&none  &kp C_BRI_DEC  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &kp C_VOLUME_DOWN  &none
+&none  &kp LCTRL      &mkp LCLK       &msc SCRL_DOWN  &mkp RCLK        &kp LEFT_ARROW    &kp RIGHT_ARROW  &mkp LCLK       &mmv MOVE_DOWN  &mkp RCLK        &kp K_MUTE         &none
+                                      &trans          &trans           &trans            &trans           &trans          &trans
             >;
         };
     };

@@ -1,7 +1,5 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
 #define NAV 1
@@ -74,53 +72,53 @@
 &none  &kp Q            &kp D            &kp R         &kp W                      &kp B                       &kp J                         &kp F                     &kp U         &kp P             &kp BACKSPACE        &none
 &none  &mt A COLON      &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T          &kp G                       &kp Y                         &hml RIGHT_SHIFT N        &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
 &none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M         &hml LC(C) C               &hml LC(V) V                &kp K                         &kp L                     &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
-                                         &none         &mo_new_behavior 1 ESCAPE  &mo_new_behavior 2 SPACE    &mo_new_behavior 3 BACKSPACE  &mo_new_behavior 1 ENTER  &none
+                                         &none         &mo_new_behavior 0 ESCAPE  &mo_new_behavior 0 SPACE    &mo_new_behavior 0 BACKSPACE  &mo_new_behavior 0 ENTER  &none
             >;
 
             label = "KeyPress";
         };
 
         Symbol {
-            bindings = <
-&trans  &mt RIGHT_BRACE LEFT_BRACE              &kp EXCL       &kp AT       &kp POUND      &kp PIPE     &none      &none     &none              &none      &none      &trans
-&trans  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp DOLLAR     &kp PERCENT  &kp ASTRK      &kp MINUS    &kp UNDER  &kp APOS  &kp DOUBLE_QUOTES  &kp GRAVE  &kp TILDE  &trans
-&trans  &mt RIGHT_BRACKET LEFT_BRACKET          &kp AMPERSAND  &kp EQUAL    &kp AMPERSAND  &kp PLUS     &none      &none     &none              &none      &none      &trans
-                                                               &trans       &trans         &trans       &trans     &trans    &trans
-            >;
-
-            label = "SYM";
-        };
-
-        NumPad {
-            bindings = <
-&trans  &kp C_MUTE    &kp K_MUTE        &kp C_VOL_DN          &kp C_VOL_UP          &trans    &none   &hml LS(LG(N7)) N7              &hml LS(LG(N8)) N8              &hml LS(LG(N9)) NUMBER_9        &kp COMMA       &trans
-&trans  &trans        &kp K_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &none   &hml LS(LG(NUMBER_4)) NUMBER_4  &hml LS(LG(N5)) N5              &hml LS(LG(NUMBER_6)) NUMBER_6  &kp LEFT_SHIFT  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2          &bt BT_SEL 3          &trans    &none   &hml LG(LS(NUMBER_1)) NUMBER_1  &hml LS(LG(NUMBER_2)) NUMBER_2  &hml LS(LG(NUMBER_3)) NUMBER_3  &kp DOT         &trans
-                                        &trans                &trans                &trans    &kp N0  &kp LEFT_GUI                    &none
-            >;
-
-            label = "NUM";
-        };
-
-        Mouse {
-            bindings = <
-&trans  &kp RCTRL      &msc SCRL_DOWN      &mmv MOVE_Y(-1200)  &msc SCRL_UP       &kp K_BACK       &kp F1   &kp F2    &kp UP    &kp F3     &kp F4        &trans
-&trans  &mkp RCLK      &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)  &kp K_FORWARD    &kp F11  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_GUI  &trans
-&trans  &kp LC(MINUS)  &msc SCRL_LEFT      &none               &msc SCRL_RIGHT    &kp LC(PLUS)     &kp F6   &kp F7    &kp F8    &kp F9     &kp F10       &trans
-                                           &kp LEFT_SHIFT      &kp F12            &mkp LCLK        &kp F5   &trans    &trans
-            >;
-
-            label = "MSE";
-        };
-
-        layer_4 {
             label = "KeyPress";
             display-name = "KYB";
             bindings = <
 &none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                     &kp POUND                   &kp DOLLAR                    &kp PERCENT               &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
 &none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS       &kp UP_ARROW                &kp DOWN                      &kp RIGHT_PARENTHESIS     &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
 &none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS                   &kp LEFT_ARROW              &kp RIGHT_ARROW               &kp BACKSLASH             &kp SLASH          &kp GRAVE        &kp ASTRK          &none
-                                         &none             &mo_new_behavior 1 ESCAPE  &mo_new_behavior 2 SPACE    &mo_new_behavior 3 BACKSPACE  &mo_new_behavior 1 ENTER  &none
+                                         &none             &mo_new_behavior 0 ESCAPE  &mo_new_behavior 0 SPACE    &mo_new_behavior 0 BACKSPACE  &mo_new_behavior 0 ENTER  &none
+            >;
+        };
+
+        Numpad {
+            label = "KeyPress";
+            display-name = "KYB";
+            bindings = <
+&none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                     &kp POUND                   &kp DOLLAR                    &kp PERCENT               &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
+&none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS       &kp UP_ARROW                &kp DOWN                      &kp RIGHT_PARENTHESIS     &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
+&none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS                   &kp LEFT_ARROW              &kp RIGHT_ARROW               &kp BACKSLASH             &kp SLASH          &kp GRAVE        &kp ASTRK          &none
+                                         &none             &mo_new_behavior 0 ESCAPE  &mo_new_behavior 0 SPACE    &mo_new_behavior 0 BACKSPACE  &mo_new_behavior 0 ENTER  &none
+            >;
+        };
+
+        Navigation {
+            label = "KeyPress";
+            display-name = "KYB";
+            bindings = <
+&none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                     &kp POUND                   &kp DOLLAR                    &kp PERCENT               &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
+&none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS       &kp UP_ARROW                &kp DOWN                      &kp RIGHT_PARENTHESIS     &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
+&none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS                   &kp LEFT_ARROW              &kp RIGHT_ARROW               &kp BACKSLASH             &kp SLASH          &kp GRAVE        &kp ASTRK          &none
+                                         &none             &mo_new_behavior 0 ESCAPE  &mo_new_behavior 0 SPACE    &mo_new_behavior 0 BACKSPACE  &mo_new_behavior 0 ENTER  &none
+            >;
+        };
+
+        Macro {
+            label = "KeyPress";
+            display-name = "KYB";
+            bindings = <
+&none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                     &kp POUND                   &kp DOLLAR                    &kp PERCENT               &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
+&none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS       &kp UP_ARROW                &kp DOWN                      &kp RIGHT_PARENTHESIS     &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
+&none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS                   &kp LEFT_ARROW              &kp RIGHT_ARROW               &kp BACKSLASH             &kp SLASH          &kp GRAVE        &kp ASTRK          &none
+                                         &none             &mo_new_behavior 0 ESCAPE  &mo_new_behavior 0 SPACE    &mo_new_behavior 0 BACKSPACE  &mo_new_behavior 0 ENTER  &none
             >;
         };
     };

@@ -104,7 +104,7 @@
         compatible = "zmk,keymap";
 
         KeyPress {
-            display-name = "KYB";
+            display-name = "KYP";
 
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
@@ -124,7 +124,7 @@
 
         Symbol {
             label = "Symbol";
-            display-name = "KYB";
+            display-name = "SYM";
             bindings = <
 &none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
 &none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
@@ -135,7 +135,7 @@
 
         Numpad {
             label = "Numpad";
-            display-name = "KYB";
+            display-name = "NUM";
             bindings = <
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &none     &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
@@ -146,7 +146,7 @@
 
         Macro {
             label = "Macro";
-            display-name = "KYB";
+            display-name = "MCR";
             bindings = <
 &none  &none  &none  &none   &kp LG(P)  &kp LG(J)         &kp LG(S)        &mt LG(LS(N7)) LG(N7)              &mt LG(LS(N8)) LG(N8)           &mt LG(LS(N9)) LG(N9)              &kp LG(LS(S))  &none
 &none  &none  &none  &work   &perso     &kp UP_ARROW      &kp DOWN         &mt LG(NUMBER_4) LG(NUMBER_4)      &mt LG(LS(N5)) LG(N5)           &mt LG(LS(NUMBER_6)) LG(NUMBER_6)  &kp LG(V)      &none
@@ -157,7 +157,7 @@
 
         Navigation {
             label = "Navigation";
-            display-name = "KYB";
+            display-name = "NAV";
             bindings = <
 &none  &kp C_BRI_UP   &kp HOME        &mkp MCLK       &kp END          &kp LCTRL         &kp PRINTSCREEN  &kp K_BACK      &mkp MCLK       &kp K_FORWARD    &kp C_VOLUME_UP    &none
 &none  &kp C_BRI_DEC  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &kp C_VOLUME_DOWN  &none

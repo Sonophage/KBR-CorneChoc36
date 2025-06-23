@@ -38,7 +38,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&lt>;
 
             quick-tap-ms = <200>;
         };
@@ -65,19 +65,19 @@
         };
 
         NavTog {
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
             key-positions = <40 41>;
-            layers = <1 2 0 3 4>;
+            layers = <1 2 0 3>;
         };
 
         Macro_Tog {
-            bindings = <&tog 3>;
+            bindings = <&tog 0>;
             key-positions = <40 39>;
-            layers = <1 2 0 3 4>;
+            layers = <1 2 0 3>;
         };
 
         Nav_Tog {
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
             key-positions = <41 40>;
         };
     };
@@ -113,10 +113,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp Q            &kp D            &kp R         &kp W                      &kp B                       &kp J                         &kp F                     &kp U         &kp P             &kp BACKSPACE        &none
-&none  &hml COLON A     &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T          &kp G                       &kp Y                         &hml RIGHT_SHIFT N        &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
-&none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M         &hml LC(C) C               &hml LC(V) V                &kp K                         &kp L                     &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
-                                         &none         &mo_new_behavior 1 ESCAPE  &mo_new_behavior 2 SPACE    &mo_new_behavior 3 BACKSPACE  &mo_new_behavior 4 ENTER  &none
+&none  &kp Q            &kp D            &kp R                 &kp W                 &kp B                   &kp J      &kp F               &kp U         &kp P             &kp BACKSPACE        &none
+&none  &hml COLON A     &hml LEFT_ALT S  &hml LCTRL H          &hml LEFT_SHIFT T     &kp G                   &kp Y      &hml RIGHT_SHIFT N  &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
+&none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M                 &hml LC(C) C          &hml LC(V) V            &kp K      &kp L               &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
+                                         &mo_new_behavior 1 1  &mo_new_behavior 3 3  &mo_new_behavior 2 2    &kp SPACE  &kp ENTER           &kp DELETE
             >;
 
             label = "KeyPress";
@@ -128,7 +128,7 @@
             bindings = <
 &none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
 &none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
-&none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS              &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp BACKSLASH          &kp SLASH          &kp GRAVE        &kp ASTRK          &none
+&none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS              &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp BACKSLASH          &kp EQUAL          &kp GRAVE        &kp ASTRK          &none
                                          &trans            &trans                &trans            &trans           &trans                 &trans
             >;
         };
@@ -137,21 +137,10 @@
             label = "Numpad";
             display-name = "NUM";
             bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &none
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &none     &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &none     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &none
-                        &trans   &trans   &trans    &trans        &trans        &trans
-            >;
-        };
-
-        Macro {
-            label = "Macro";
-            display-name = "MCR";
-            bindings = <
-&none  &none  &none  &none   &kp LG(P)  &kp LG(J)         &kp LG(S)        &mt LG(LS(N7)) LG(N7)              &mt LG(LS(N8)) LG(N8)           &mt LG(LS(N9)) LG(N9)              &kp LG(LS(S))  &none
-&none  &none  &none  &work   &perso     &kp UP_ARROW      &kp DOWN         &mt LG(NUMBER_4) LG(NUMBER_4)      &mt LG(LS(N5)) LG(N5)           &mt LG(LS(NUMBER_6)) LG(NUMBER_6)  &kp LG(V)      &none
-&none  &none  &none  &none   &none      &kp LEFT_ARROW    &kp RIGHT_ARROW  &mt LG(LS(NUMBER_1)) LG(NUMBER_1)  &mt LG(LS(SLASH)) LG(NUMBER_2)  &mt LG(LS(NUMBER_3)) LG(NUMBER_3)  &kp LG(DOWN)   &none
-                     &trans  &trans     &trans            &trans           &trans                             &trans
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &kp LEFT_SHIFT    &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &none
+&none  &kp F5  &kp F6   &kp F7   &kp F8   &kp LEFT_GUI      &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &none             &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &none
+                        &trans   &trans   &trans            &trans        &trans        &trans
             >;
         };
 
@@ -159,9 +148,9 @@
             label = "Navigation";
             display-name = "NAV";
             bindings = <
-&none  &kp C_BRI_UP   &kp HOME        &mkp MCLK       &kp END          &kp LCTRL         &kp PRINTSCREEN  &kp K_BACK      &mkp MCLK       &kp K_FORWARD    &kp C_VOLUME_UP    &none
-&none  &kp C_BRI_DEC  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &kp C_VOLUME_DOWN  &none
-&none  &kp LEFT_GUI   &mkp LCLK       &msc SCRL_DOWN  &mkp RCLK        &kp LEFT_ARROW    &kp RIGHT_ARROW  &mkp LCLK       &mmv MOVE_DOWN  &mkp RCLK        &kp K_MUTE         &none
+&none  &kp C_BRI_UP   &mkp LCLK       &msc SCRL_UP    &mkp RCLK        &kp LCTRL         &kp PRINTSCREEN  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp C_VOLUME_UP    &none
+&none  &kp C_BRI_DEC  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_VOLUME_DOWN  &none
+&none  &kp LEFT_GUI   &kp LC(Z)       &kp LG(C)       &kp LG(P)        &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp K_BACK      &mmv MOVE_DOWN  &kp K_FORWARD    &kp K_MUTE         &none
                                       &trans          &trans           &trans            &trans           &trans          &trans
             >;
         };

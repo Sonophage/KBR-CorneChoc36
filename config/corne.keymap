@@ -92,6 +92,12 @@
             key-positions = <40 38>;
             layers = <1 2 0 3>;
         };
+
+        Escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+            timeout-ms = <100>;
+        };
     };
 
     //
@@ -149,10 +155,10 @@
             label = "Numpad";
             display-name = "NUM";
             bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &kp LEFT_SHIFT    &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &none
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &kp LEFT_GUI      &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &none             &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &none
-                        &trans   &trans   &trans            &trans        &trans        &trans
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &kp LA(LEFT_GUI)    &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &none
+&none  &kp F5  &kp F6   &kp F7   &kp F8   &kp LEFT_GUI        &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &none               &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &none
+                        &trans   &trans   &trans              &trans        &trans        &trans
             >;
         };
 

@@ -32,13 +32,24 @@
             quick-tap-ms = <200>;
         };
 
-        mo_new_behavior: mo_new_behavior {
+        mo_new_behavior_Work: mo_new_behavior_Work {
             compatible = "zmk,behavior-hold-tap";
-            label = "MO_NEW_BEHAVIOR";
+            label = "MO_NEW_BEHAVIOR_WORK";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&lt>;
+            bindings = <&mo>, <&work>;
+
+            quick-tap-ms = <200>;
+        };
+
+        mo_Personal: mo_Personal {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_PERSONAL";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&perso>;
 
             quick-tap-ms = <200>;
         };
@@ -61,24 +72,25 @@
 
         Caps {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <16 19>;
+            key-positions = <39 38>;
         };
 
         NavTog {
             bindings = <&tog 3>;
-            key-positions = <40 41>;
+            key-positions = <37 40>;
             layers = <1 2 0 3>;
         };
 
-        Macro_Tog {
-            bindings = <&tog 0>;
-            key-positions = <40 39>;
+        SymbolToggle {
+            bindings = <&tog 1>;
+            key-positions = <36 40>;
             layers = <1 2 0 3>;
         };
 
-        Nav_Tog {
-            bindings = <&tog 3>;
-            key-positions = <41 40>;
+        NumToggle {
+            bindings = <&tog 2>;
+            key-positions = <40 38>;
+            layers = <1 2 0 3>;
         };
     };
 
@@ -113,10 +125,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp Q            &kp D            &kp R                 &kp W                 &kp B                   &kp J      &kp F               &kp U         &kp P             &kp BACKSPACE        &none
-&none  &hml COLON A     &hml LEFT_ALT S  &hml LCTRL H          &hml LEFT_SHIFT T     &kp G                   &kp Y      &hml RIGHT_SHIFT N  &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
-&none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M                 &hml LC(C) C          &hml LC(V) V            &kp K      &kp L               &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
-                                         &mo_new_behavior 1 1  &mo_new_behavior 3 3  &mo_new_behavior 2 2    &kp SPACE  &kp ENTER           &kp DELETE
+&none  &kp Q            &kp D            &kp R         &kp W              &kp B                        &kp J      &kp F               &kp U         &kp P             &kp BACKSPACE        &none
+&none  &hml COLON A     &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T  &kp G                        &kp Y      &hml RIGHT_SHIFT N  &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
+&none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M         &hml LC(C) C       &hml LC(V) V                 &kp K      &kp L               &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
+                                         &mo 1         &mo_Personal 3 3   &mo_new_behavior_Work 2 2    &kp SPACE  &kp ENTER           &kp DELETE
             >;
 
             label = "KeyPress";

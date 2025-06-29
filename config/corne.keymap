@@ -31,28 +31,6 @@
 
             quick-tap-ms = <200>;
         };
-
-        mo_new_behavior_Work: mo_new_behavior_Work {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_NEW_BEHAVIOR_WORK";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&work>;
-
-            quick-tap-ms = <200>;
-        };
-
-        mo_Personal: mo_Personal {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_PERSONAL";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&perso>;
-
-            quick-tap-ms = <200>;
-        };
     };
 
     combos {
@@ -72,31 +50,41 @@
 
         Caps {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <39 38>;
+            key-positions = <16 19>;
         };
 
         NavTog {
             bindings = <&tog 3>;
-            key-positions = <37 40>;
-            layers = <1 2 0 3>;
+            key-positions = <40 38>;
+            layers = <3 1 0 4>;
         };
 
         SymbolToggle {
-            bindings = <&tog 1>;
-            key-positions = <36 40>;
-            layers = <1 2 0 3>;
+            bindings = <&tog 2>;
+            key-positions = <41 37>;
+            layers = <3 1 0 4>;
         };
 
         NumToggle {
-            bindings = <&tog 2>;
-            key-positions = <40 38>;
-            layers = <1 2 0 3>;
+            bindings = <&tog 1>;
+            key-positions = <41 36>;
+            layers = <3 1 0 4>;
         };
 
         Escape {
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
             timeout-ms = <100>;
+        };
+
+        Def {
+            bindings = <&personal>;
+            key-positions = <2 41 9>;
+        };
+
+        Mem {
+            bindings = <&work>;
+            key-positions = <27 9 41>;
         };
     };
 
@@ -106,11 +94,11 @@
         work: work {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp AT &kp LS(M) &kp E &kp M &kp N &kp N0 &kp C &kp H &kp N0 &kp NUMBER_3 &kp N6 &kp N9 &kp EXCL>;
+            bindings = <&none &kp AT &kp LS(M) &kp NUMBER_3 &kp M &kp N &kp N0 &kp C &kp H &kp N0 &kp NUMBER_3 &kp N6 &kp N9 &kp EXCL>;
             label = "WORK";
         };
 
-        perso: perso {
+        personal: perso {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LS(D) &kp N3 &kp F &kp Q &kp N0 &kp N &kp N1 &kp EXCL &kp N2 &kp N1 &kp N1 &kp N2>;
@@ -131,24 +119,13 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp Q            &kp D            &kp R         &kp W              &kp B                        &kp J      &kp F               &kp U         &kp P             &kp BACKSPACE        &none
-&none  &hml COLON A     &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T  &kp G                        &kp Y      &hml RIGHT_SHIFT N  &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I          &none
-&none  &hml LEFT_GUI Z  &hml LC(X) X     &kp M         &hml LC(C) C       &hml LC(V) V                 &kp K      &kp L               &kp COMMA     &kp DOT           &mt RIGHT_GUI SLASH  &none
-                                         &mo 1         &mo_Personal 3 3   &mo_new_behavior_Work 2 2    &kp SPACE  &kp ENTER           &kp DELETE
+&none  &kp Q         &kp D            &kp R         &kp W              &kp B           &kp J      &kp F               &kp U         &kp P             &kp BACKSPACE  &none
+&none  &hml COLON A  &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T  &kp G           &kp Y      &hml RIGHT_SHIFT N  &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I    &none
+&none  &hml LC(Z) Z  &hml LC(X) X     &kp M         &hml LC(C) C       &hml LC(V) V    &kp K      &kp L               &kp COMMA     &kp DOT           &kp SLASH      &none
+                                      &mo 1         &mo 2              &mo 3           &kp SPACE  &kp ENTER           &kp LEFT_GUI
             >;
 
             label = "KeyPress";
-        };
-
-        Symbol {
-            label = "Symbol";
-            display-name = "SYM";
-            bindings = <
-&none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
-&none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
-&none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS              &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp BACKSLASH          &kp EQUAL          &kp GRAVE        &kp ASTRK          &none
-                                         &trans            &trans                &trans            &trans           &trans                 &trans
-            >;
         };
 
         Numpad {
@@ -159,6 +136,17 @@
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &kp LEFT_GUI        &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
 &none  &kp F9  &kp F10  &kp F11  &kp F12  &none               &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &none
                         &trans   &trans   &trans              &trans        &trans        &trans
+            >;
+        };
+
+        Symbol {
+            label = "Symbol";
+            display-name = "SYM";
+            bindings = <
+&none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
+&none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
+&none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS              &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp BACKSLASH          &kp EQUAL          &kp GRAVE        &kp ASTRK          &none
+                                         &trans            &trans                &trans            &trans           &trans                 &trans
             >;
         };
 

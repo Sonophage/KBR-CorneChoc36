@@ -55,13 +55,13 @@
 
         NavTog {
             bindings = <&tog 3>;
-            key-positions = <40 38>;
+            key-positions = <38 39>;
             layers = <3 1 0 4>;
         };
 
         SymbolToggle {
             bindings = <&tog 2>;
-            key-positions = <41 37>;
+            key-positions = <37 40>;
             layers = <3 1 0 4>;
         };
 

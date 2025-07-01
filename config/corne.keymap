@@ -156,7 +156,7 @@
             bindings = <
 &none  &kp C_BRI_UP   &mkp LCLK       &msc SCRL_UP    &mkp RCLK        &kp LCTRL         &kp PRINTSCREEN  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp C_VOLUME_UP    &none
 &none  &kp C_BRI_DEC  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp UP_ARROW      &kp DOWN         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_VOLUME_DOWN  &none
-&none  &kp LEFT_GUI   &kp LC(Z)       &kp LG(C)       &kp LG(P)        &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp K_BACK      &mmv MOVE_DOWN  &kp K_FORWARD    &kp K_MUTE         &none
+&none  &kp LEFT_GUI   &kp HOME        &kp LEFT_ALT    &kp END          &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp K_BACK      &mmv MOVE_DOWN  &kp K_FORWARD    &kp K_MUTE         &none
                                       &trans          &trans           &trans            &trans           &trans          &trans
             >;
         };

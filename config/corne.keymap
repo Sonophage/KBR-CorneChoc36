@@ -79,12 +79,12 @@
 
         Def {
             bindings = <&personal>;
-            key-positions = <2 41 9>;
+            key-positions = <2 41 10>;
         };
 
         Mem {
             bindings = <&work>;
-            key-positions = <27 9 41>;
+            key-positions = <27 41 10>;
         };
 
         mighty {

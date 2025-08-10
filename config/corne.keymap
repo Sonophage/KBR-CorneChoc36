@@ -12,11 +12,14 @@
 
 //testing mouse movement and scroll binds...
 
-&mmv { acceleration-exponent = <1>; };
+&mmv {
+    acceleration-exponent = <3>;
+    time-to-max-speed-ms = <150>;
+};
 
 &msc {
-    time-to-max-speed-ms = <150>;
-    acceleration-exponent = <2>;
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <3>;
 };
 
 / {

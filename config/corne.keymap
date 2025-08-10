@@ -25,11 +25,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYER";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <200>;
+            quick-tap-ms = <150>;
         };
     };
 
@@ -132,8 +132,8 @@
 
             bindings = <
 &none  &kp Q         &kp D            &kp R         &kp W              &kp B           &kp J      &kp F               &kp U         &kp P             &kp BACKSPACE  &none
-&none  &hml COLON A  &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T  &kp G           &kp Y      &hml RIGHT_SHIFT N  &hml RCTRL E  &hml RIGHT_ALT O  &hml SEMI I    &none
-&none  &hml LC(Z) Z  &hml LC(X) X     &kp M         &hml LC(C) C       &hml LC(V) V    &kp K      &kp L               &kp COMMA     &kp SLASH         &kp PERIOD     &none
+&none  &hml SEMI A   &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T  &kp G           &kp Y      &hml RIGHT_SHIFT N  &hml RCTRL E  &hml RIGHT_ALT O  &hml COLON I   &none
+&none  &hml LC(Z) Z  &hml LC(X) X     &kp M         &hml LC(C) C       &hml LC(V) V    &kp K      &kp L               &kp COMMA     &kp PERIOD        &kp SLASH      &none
                                       &mo 1         &mo 2              &mo 3           &kp SPACE  &kp ENTER           &kp LEFT_GUI
             >;
 
@@ -144,10 +144,10 @@
             label = "Numpad";
             display-name = "NUM";
             bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &kp LA(LEFT_GUI)    &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp PLUS   &none
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &kp LEFT_GUI        &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &none               &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTRK  &none
-                        &trans   &trans   &trans              &trans        &trans        &trans
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &kp LEFT_GUI        &kp EQUAL     &kp N7        &kp N8        &kp N9        &kp DELETE  &none
+&none  &kp F5  &kp F6   &kp F7   &kp F8   &kp LA(LEFT_GUI)    &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none       &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &kp MINUS           &kp PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH   &none
+                        &trans   &trans   &trans              &kp N0        &trans        &trans
             >;
         };
 
@@ -155,10 +155,10 @@
             label = "Symbol";
             display-name = "SYM";
             bindings = <
-&none  &kp SINGLE_QUOTE  &kp TILDE       &kp EXCL          &kp AT                &kp POUND         &kp DOLLAR       &kp PERCENT            &kp CARET          &kp AMPERSAND    &kp DOUBLE_QUOTES  &none
-&none  &kp UNDER         &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS          &none
-&none  &kp KP_DIVIDE     &kp PIPE        &kp KP_SUBTRACT   &kp PLUS              &kp LEFT_ARROW    &kp RIGHT_ARROW  &kp BACKSLASH          &kp EQUAL          &kp GRAVE        &kp ASTRK          &none
-                                         &trans            &trans                &trans            &trans           &trans                 &trans
+&none  &kp HASH       &kp TILDE       &kp AT_SIGN       &kp EXCLAMATION       &kp SQT           &kp DOUBLE_QUOTES  &kp PERCENT            &kp DOLLAR         &kp AMPERSAND    &kp ASTERISK  &none
+&none  &kp UNDER      &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp UP_ARROW      &kp DOWN           &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp MINUS     &none
+&none  &kp KP_DIVIDE  &kp PIPE        &kp KP_SUBTRACT   &kp PLUS              &kp LEFT_ARROW    &kp RIGHT_ARROW    &kp BACKSLASH          &kp CARET          &kp GRAVE        &kp KP_EQUAL  &none
+                                      &trans            &trans                &trans            &trans             &trans                 &trans
             >;
         };
 
@@ -168,7 +168,7 @@
             bindings = <
 &none  &kp C_BRI_UP   &mkp LCLK       &msc SCRL_UP    &mkp RCLK        &kp PRINTSCREEN    &kp LCTRL        &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp C_VOLUME_UP    &none
 &none  &kp C_BRI_DEC  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp UP_ARROW       &kp DOWN         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_VOLUME_DOWN  &none
-&none  &kp LEFT_GUI   &kp HOME        &mkp MCLK       &kp END          &kp LEFT_ARROW     &kp RIGHT_ARROW  &kp K_BACK      &mmv MOVE_DOWN  &kp K_FORWARD    &kp K_MUTE         &none
+&none  &kp LEFT_GUI   &kp HOME        &mkp MCLK       &kp END          &kp LEFT_ARROW     &kp RIGHT_ARROW  &kp K_BACK      &kp K_MUTE      &kp K_FORWARD    &kp RIGHT_GUI      &none
                                       &trans          &trans           &trans             &trans           &trans          &trans
             >;
         };

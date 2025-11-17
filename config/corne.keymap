@@ -134,10 +134,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp Q         &kp D            &kp R         &kp W              &kp B           &kp J      &kp F               &kp U         &kp P             &kp BACKSPACE  &none
-&none  &hml SEMI A   &hml LEFT_ALT S  &hml LCTRL H  &hml LEFT_SHIFT T  &kp G           &kp Y      &hml RIGHT_SHIFT N  &hml RCTRL E  &hml RIGHT_ALT O  &hml COLON I   &none
-&none  &hml LC(Z) Z  &hml LC(X) X     &kp M         &hml LC(C) C       &hml LC(V) V    &kp K      &kp L               &kp COMMA     &kp PERIOD        &kp SLASH      &none
-                                      &mo 1         &mo 2              &mo 3           &kp SPACE  &kp ENTER           &kp LEFT_GUI
+&none  &kp Q         &kp W            &kp E         &kp R         &kp T    &kp Y      &kp U               &kp I         &kp O             &kp P             &none
+&none  &hml SEMI A   &hml LEFT_ALT S  &hml LCTRL D  &hml F T      &kp G    &kp H      &hml RIGHT_SHIFT J  &hml RCTRL K  &hml RIGHT_ALT L  &hml COLON ENTER  &none
+&none  &hml LC(Z) Z  &hml LC(X) X     &hml LC(C) C  &hml LC(V) V  &kp B    &kp N      &kp L               &kp COMMA     &kp PERIOD        &kp SLASH         &none
+                                      &mo 1         &mo 2         &mo 3    &kp SPACE  &kp ENTER           &kp LEFT_GUI
             >;
 
             label = "KeyPress";
